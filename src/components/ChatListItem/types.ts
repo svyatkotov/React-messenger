@@ -1,8 +1,7 @@
-interface OwnProps {
+export interface IChatListItem {
+  chatId: number;
   name: string;
-  date: string;
+  date: Date;
   author: string;
   message: string;
 }
-
-export type Props = OwnProps;
