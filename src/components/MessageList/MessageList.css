@@ -1,8 +1,9 @@
-.chat-list {
+.message-list {
   display: flex;
   flex-direction: column;
   list-style: none;
-  padding: 20px;
+  padding: 20px 50px;
+  margin-left: 50px;
   border: 3px solid #60d2d6;
   border-radius: 10px;
 }

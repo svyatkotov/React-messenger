@@ -16,8 +16,8 @@ export default class ChatListItem extends Component<IChatListItem> {
             <span className="chat-list-item__date">{this.props.date.toLocaleDateString()}</span>
           </div>
           <div className="chat-list-item__content">
-            <span className="chat-list-item__author">{`${this.props.author}:`}</span>
-            <span className="chat-list-item__message">{this.props.message}</span>
+            <span className="chat-list-item__author">{`${this.props.lastMessageAuthor}:`}</span>
+            <span className="chat-list-item__message">{this.props.lastMessagePreview}</span>
           </div>
         </div>
       </li>

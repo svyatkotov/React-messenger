@@ -2,6 +2,6 @@ export interface IChatListItem {
   chatId: number;
   name: string;
   date: Date;
-  author: string;
-  message: string;
+  lastMessageAuthor: string | null;
+  lastMessagePreview: string | null;
 }

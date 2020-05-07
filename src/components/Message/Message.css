@@ -1,0 +1,25 @@
+.message {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  border: 1px solid #60d2d6;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #eaf1f1;
+}
+
+.message__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.message__author {
+  font-weight: bold;
+}
+
+.message__date {
+  color: #696969;
+}

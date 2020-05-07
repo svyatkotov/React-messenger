@@ -6,7 +6,7 @@ import "./ChatList.css";
 
 export default class ChatList extends Component<IChatList> {
   sortedChatList: IChatListItem[] = this.props.chatListItems.sort((a: IChatListItem, b: IChatListItem) =>
-      a.message && b.message ? b.date.getTime() - a.date.getTime() : 1
+      a.lastMessagePreview && b.lastMessagePreview ? b.date.getTime() - a.date.getTime() : 1
   );
 
   render() {
@@ -15,7 +15,7 @@ export default class ChatList extends Component<IChatList> {
         {this.sortedChatList.map((item: IChatListItem) => {
           return (
             <ChatListItem 
-              key={item.chatId}
+              key={item.chatId.toString()}
               {...item}
             />  
           );

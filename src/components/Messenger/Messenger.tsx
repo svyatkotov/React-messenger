@@ -1,11 +1,16 @@
 import React, { Component } from "react";
 import ChatList from "../ChatList";
-import { chatListItems } from "./messengerData";
+import MessageList from "../MessageList";
+import { chatListItems, messages } from "./messengerData";
+import "./Messenger.css";
 
 export default class Messenger extends Component {
   render() {
     return (
-      <ChatList chatListItems={chatListItems}/>
+      <div className="messenger">
+        <ChatList chatListItems={chatListItems}/>
+        <MessageList messages={messages}/>
+      </div>
     );
   }
 }
