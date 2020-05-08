@@ -10,6 +10,10 @@
 }
 
 .chat-list-item:hover {
+  background-color: #c1ebeb;
+}
+
+.active {
   background-color: #eaf1f1;
 }
 
@@ -40,6 +44,7 @@
 
 .chat-list-item__content {
   display: flex;
+  overflow: hidden;
 }
 
 .chat-list-item__author {
@@ -53,4 +58,8 @@
 
 .chat-list-item__date {
   color: #696969;
+}
+
+.chat-list-item__message {
+  white-space: nowrap;
 }
