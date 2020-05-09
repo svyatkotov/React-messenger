@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "eb012148b0aa25ec0f2f1bb06b6cc73a",
+    "revision": "8cd9784378e6e14a957a185a0829ff92",
     "url": "/middle.react.praktikum.yandex/index.html"
   },
   {
-    "revision": "ab39d9da2abb6bb93bdc",
+    "revision": "4e1a22a5c729ea68026d",
     "url": "/middle.react.praktikum.yandex/static/css/main.089423a9.chunk.css"
   },
   {
-    "revision": "7c9162e36c8f95684e68",
-    "url": "/middle.react.praktikum.yandex/static/js/2.53374e15.chunk.js"
+    "revision": "25f4b8e4793bba7e7650",
+    "url": "/middle.react.praktikum.yandex/static/js/2.901d0ee3.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/middle.react.praktikum.yandex/static/js/2.53374e15.chunk.js.LICENSE.txt"
+    "url": "/middle.react.praktikum.yandex/static/js/2.901d0ee3.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ab39d9da2abb6bb93bdc",
-    "url": "/middle.react.praktikum.yandex/static/js/main.f8df3986.chunk.js"
+    "revision": "4e1a22a5c729ea68026d",
+    "url": "/middle.react.praktikum.yandex/static/js/main.5ebe3c66.chunk.js"
   },
   {
     "revision": "c7ce702d4e73cec005f5",
