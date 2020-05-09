@@ -102,5 +102,5 @@ export const messages: IMessage[] = [
     date: new Date(2020, 4, 2),
     author: "Vika",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a egestas risus, eget ultricies nibh. Aliquam efficitur libero dictum, sollicitudin sapien eget, hendrerit lectus."
-  },
+  }
 ];
