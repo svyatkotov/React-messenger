@@ -56,7 +56,8 @@
   font-weight: bold;
 }
 
-.chat-list-item__date {
+.chat-list-item__time {
+  font-size: 14px;
   color: #696969;
 }
 

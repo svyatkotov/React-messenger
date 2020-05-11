@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { IState, TChatId, THandleClick } from "./types";
-import { IMessage } from "../Message/types";
+import { IMessageListItem } from "../MessageListItem/types";
 import { IChatListItem } from "../ChatListItem/types";
 import { ChatList } from "../ChatList";
 import { MessageList } from "../MessageList";
@@ -17,10 +17,11 @@ export class Messenger extends Component {
   private getChatListItems = (chatListItems: IChatListItem[]): IChatListItem[] => {
     chatListItems.map((item: IChatListItem): IChatListItem => {
       if (item.chatId) {
-        const messages: IMessage[] = this.getMessages(item.chatId);
-        const lastMessage: IMessage = messages[messages.length - 1];
+        const messages: IMessageListItem[] = this.getMessages(item.chatId);
+        const lastMessage: IMessageListItem = messages[messages.length - 1];
 
         if (lastMessage) {
+          item.lastMessageTime = lastMessage.time;
           item.lastMessageAuthor = lastMessage.author;
           item.lastMessagePreview = lastMessage.text;
         }
@@ -28,13 +29,12 @@ export class Messenger extends Component {
 
       return item;
     });
-    return chatListItems.sort((aDate, bDate) => bDate.date.getTime() - aDate.date.getTime());
+    return chatListItems.sort((aDate, bDate) => bDate.lastMessageTime.getTime() - aDate.lastMessageTime.getTime());
   };
   
-  private getMessages = (chatId: TChatId): IMessage[] => {
-    return messages
-      .filter((message) => message.chatId === chatId)
-      .sort((aDate, bDate) => aDate.date.getTime() - bDate.date.getTime());
+  private getMessages = (chatId: TChatId): IMessageListItem[] => {
+    return messages[chatId - 1].messageListItems
+      .sort((aDate, bDate) => aDate.time.getTime() - bDate.time.getTime());
   };
 
   componentDidMount() {
@@ -44,11 +44,10 @@ export class Messenger extends Component {
   }
 
   private handleClick: THandleClick = (chatId) => {
-    const messages: IMessage[] = this.getMessages(chatId);
     return () => {
       this.setState({
         activeChatId: chatId,
-        messages: messages
+        messages: this.getMessages(chatId)
       });
     };
   };

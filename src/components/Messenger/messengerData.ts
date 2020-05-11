@@ -1,106 +1,86 @@
 import { IChatListItem } from "../ChatListItem/types";
-import { IMessage } from "../Message/types";
+import { IMessages } from "../Messenger/types";
 
 export const chatListItems: IChatListItem[] = [
   {
     chatId: 1,
     name: "First chat",
-    date: new Date(2020, 4, 6),
-    lastMessageAuthor: null,
-    lastMessagePreview: null
+    lastMessageTime: new Date(0),
   },
   {
     chatId: 2,
     name: "Second chat",
-    date: new Date(2020, 4, 7),
-    lastMessageAuthor: null,
-    lastMessagePreview: null
+    lastMessageTime: new Date(0),
   },
   {
     chatId: 3,
     name: "Third chat",
-    date: new Date(2020, 4, 4),
-    lastMessageAuthor: null,
-    lastMessagePreview: null
+    lastMessageTime: new Date(0),
   },
-  {
-    chatId: 4,
-    name: "Fourth chat",
-    date: new Date(2020, 4, 2),
-    lastMessageAuthor: null,
-    lastMessagePreview: null
-  }
 ];
 
-export const messages: IMessage[] = [
+export const messages: IMessages[] = [
   {
     chatId: 1,
-    messageId: 1,
-    date: new Date(2020, 4, 6),
-    author: "Slava",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a egestas risus, eget ultricies nibh. Aliquam efficitur libero dictum, sollicitudin sapien eget, hendrerit lectus."
-  },
-  {
-    chatId: 1,
-    messageId: 2,
-    date: new Date(2020, 4, 1),
-    author: "Slava",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a egestas risus, eget ultricies nibh. Aliquam efficitur libero dictum, sollicitudin sapien eget, hendrerit lectus."
-  },
-  {
-    chatId: 1,
-    messageId: 3,
-    date: new Date(2020, 4, 3),
-    author: "Slava",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a egestas risus, eget ultricies nibh. Aliquam efficitur libero dictum, sollicitudin sapien eget, hendrerit lectus."
+    messageListItems: [
+      {
+        messageId: 1,
+        time: new Date(2020, 4, 12, 14, 36, 17),
+        author: "Slava",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a egestas risus, eget ultricies nibh. Aliquam efficitur libero dictum, sollicitudin sapien eget, hendrerit lectus."
+      },
+      {
+        messageId: 2,
+        time: new Date(2020, 4, 12, 14, 5, 55),
+        author: "Slava",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a egestas risus, eget ultricies nibh. Aliquam efficitur libero dictum, sollicitudin sapien eget, hendrerit lectus."
+      },
+      {
+        messageId: 3,
+        time: new Date(2020, 4, 12, 22, 15, 1),
+        author: "Slava",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a egestas risus, eget ultricies nibh. Aliquam efficitur libero dictum, sollicitudin sapien eget, hendrerit lectus."
+      },
+    ],
   },
   {
     chatId: 2,
-    messageId: 1,
-    date: new Date(2020, 4, 6),
-    author: "Artem",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a egestas risus, eget ultricies nibh. Aliquam efficitur libero dictum, sollicitudin sapien eget, hendrerit lectus."
-  },
-  {
-    chatId: 2,
-    messageId: 2,
-    date: new Date(2020, 4, 7),
-    author: "Artem",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a egestas risus, eget ultricies nibh. Aliquam efficitur libero dictum, sollicitudin sapien eget, hendrerit lectus."
-  },
-  {
-    chatId: 3,
-    messageId: 1,
-    date: new Date(2020, 4, 4),
-    author: "Noel",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a egestas risus, eget ultricies nibh. Aliquam efficitur libero dictum, sollicitudin sapien eget, hendrerit lectus."
-  },
-  {
-    chatId: 3,
-    messageId: 2,
-    date: new Date(2020, 4, 3),
-    author: "Noel",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a egestas risus, eget ultricies nibh. Aliquam efficitur libero dictum, sollicitudin sapien eget, hendrerit lectus."
-  },
-  {
-    chatId: 3,
-    messageId: 3,
-    date: new Date(2020, 4, 2),
-    author: "Noel",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a egestas risus, eget ultricies nibh. Aliquam efficitur libero dictum, sollicitudin sapien eget, hendrerit lectus."
+    messageListItems: [
+      {
+        messageId: 1,
+        time: new Date(2020, 4, 12, 8, 44, 33),
+        author: "Noel",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a egestas risus, eget ultricies nibh. Aliquam efficitur libero dictum, sollicitudin sapien eget, hendrerit lectus."
+      },
+      {
+        messageId: 2,
+        time: new Date(2020, 4, 12, 11, 59, 17),
+        author: "Noel",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a egestas risus, eget ultricies nibh. Aliquam efficitur libero dictum, sollicitudin sapien eget, hendrerit lectus."
+      },
+      {
+        messageId: 3,
+        time: new Date(2020, 4, 12, 6, 12, 34),
+        author: "Noel",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a egestas risus, eget ultricies nibh. Aliquam efficitur libero dictum, sollicitudin sapien eget, hendrerit lectus."
+      },
+      {
+        messageId: 4,
+        time: new Date(2020, 4, 12, 14, 14, 59),
+        author: "Noel",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a egestas risus, eget ultricies nibh. Aliquam efficitur libero dictum, sollicitudin sapien eget, hendrerit lectus."
+      },
+    ],
   },
   {
     chatId: 3,
-    messageId: 4,
-    date: new Date(2020, 4, 1),
-    author: "Noel",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a egestas risus, eget ultricies nibh. Aliquam efficitur libero dictum, sollicitudin sapien eget, hendrerit lectus."
+    messageListItems: [
+      {
+        messageId: 1,
+        time: new Date(2020, 4, 12, 23, 59, 45),
+        author: "Vika",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a egestas risus, eget ultricies nibh. Aliquam efficitur libero dictum, sollicitudin sapien eget, hendrerit lectus."
+      }
+    ],
   },
-  {
-    chatId: 4,
-    messageId: 1,
-    date: new Date(2020, 4, 2),
-    author: "Vika",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a egestas risus, eget ultricies nibh. Aliquam efficitur libero dictum, sollicitudin sapien eget, hendrerit lectus."
-  }
 ];

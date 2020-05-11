@@ -1,5 +1,5 @@
-import { IMessage } from "../Message/types";
+import { IMessageListItem } from "../MessageListItem/types";
 
 export interface IMessageList {
-  messages: IMessage[];
+  messages: IMessageListItem[];
 }

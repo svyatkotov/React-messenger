@@ -1,10 +1,15 @@
 import { IChatListItem } from "../ChatListItem/types";
-import { IMessage } from "../Message/types";
+import { IMessageListItem } from "../MessageListItem/types";
 
 export interface IState {
   activeChatId: number | null;
   chatListItems: IChatListItem[];
-  messages: IMessage[];
+  messages: IMessageListItem[];
+}
+
+export interface IMessages {
+  chatId: TChatId;
+  messageListItems: IMessageListItem[];
 }
 
 export type TChatId = number;

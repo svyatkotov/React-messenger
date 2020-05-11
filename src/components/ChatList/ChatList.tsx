@@ -7,13 +7,13 @@ import "./ChatList.css";
 export const ChatList: React.FC<IChatList> = ({chatListItems, activeChatId, handleClick}) => {
   return (
     <ul className="chat-list">
-      {chatListItems.map(({chatId, name, date, lastMessageAuthor, lastMessagePreview}: IChatListItem) => {
+      {chatListItems.map(({chatId, name, lastMessageTime, lastMessageAuthor, lastMessagePreview}: IChatListItem) => {
         return (
           <ChatListItem 
             key={chatId.toString()}
             chatId={chatId}
             name={name}
-            date={date}
+            lastMessageTime={lastMessageTime}
             lastMessageAuthor={lastMessageAuthor}
             lastMessagePreview={lastMessagePreview}
             isActive={activeChatId === chatId}

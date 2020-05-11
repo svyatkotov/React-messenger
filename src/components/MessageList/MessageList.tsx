@@ -1,19 +1,18 @@
 import React from "react";
 import { IMessageList } from "./types";
-import { IMessage } from "../Message/types";
-import { Message } from "../Message";
+import { IMessageListItem } from "../MessageListItem/types";
+import { MessageListItem } from "../MessageListItem";
 import "./MessageList.css";
 
 export const MessageList: React.FC<IMessageList> = ({messages}) => {
   return (
     <ul className="message-list">
-      {messages.map(({chatId, messageId, date, author, text}: IMessage) => {
+      {messages.map(({messageId, time, author, text}: IMessageListItem) => {
         return (
-          <Message
+          <MessageListItem
             key={messageId.toString()}
-            chatId={chatId}
             messageId={messageId}
-            date={date}
+            time={time}
             author={author}
             text={text}
           />

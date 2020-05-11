@@ -20,6 +20,7 @@
   font-weight: bold;
 }
 
-.message__date {
+.message__time {
+  font-size: 14px;
   color: #696969;
 }
