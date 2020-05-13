@@ -1,5 +1,6 @@
 import React from "react";
 import { IMessageListItem } from "./types";
+import icon from '../../assets/images/icon.svg';
 import "./MessageListItem.css";
 
 export const MessageListItem: React.FC<IMessageListItem> = ({
@@ -8,14 +9,19 @@ export const MessageListItem: React.FC<IMessageListItem> = ({
   text
 }) => {
   return (
-    <li className="message">
-      <div className="message__info">
-        <div className="message__author">{author}</div>
-        <div className="message__time">
-          {`${time.getHours() < 10 ? "0" : ""}${time.getHours()}:${time.getMinutes() < 10 ? "0" : ""}${time.getMinutes()}:${time.getSeconds() < 10 ? "0" : ""}${time.getSeconds()}`}
-        </div>
+    <li className="message-list-item">
+      <div className="message-list-item__icon">
+        <img src={icon} alt="icon" />
       </div>
-      <div className="message__text">{text}</div>
+      <div className="message-list-item__info">
+        <div className="message-list-item__title">
+          <div className="message-list-item__author">{author}</div>
+          <div className="message-list-item__time">
+            {`${time.getHours() < 10 ? "0" : ""}${time.getHours()}:${time.getMinutes() < 10 ? "0" : ""}${time.getMinutes()}`}
+          </div>
+        </div>
+        <div className="message-list-item__content">{text}</div>
+      </div>
     </li>
   );
 }

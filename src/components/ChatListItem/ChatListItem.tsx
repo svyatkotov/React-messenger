@@ -26,7 +26,9 @@ export const ChatListItem: React.FC<IProps> = ({
       <div className="chat-list-item__info">
         <div className="chat-list-item__title">
           <span className="chat-list-item__name">{name}</span>
-          <span className="chat-list-item__time">{`${lastMessageTime.getHours() < 10 ? "0" : ""}${lastMessageTime.getHours()}:${lastMessageTime.getMinutes() < 10 ? "0" : ""}${lastMessageTime.getMinutes()}:${lastMessageTime.getSeconds() < 10 ? "0" : ""}${lastMessageTime.getSeconds()}`}</span>
+          <span className="chat-list-item__time">
+            {`${lastMessageTime.getHours() < 10 ? "0" : ""}${lastMessageTime.getHours()}:${lastMessageTime.getMinutes() < 10 ? "0" : ""}${lastMessageTime.getMinutes()}`}
+          </span>
         </div>
         <div className="chat-list-item__content">
           <span className="chat-list-item__author">{`${lastMessageAuthor}:`}</span>

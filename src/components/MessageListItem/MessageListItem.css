@@ -1,6 +1,6 @@
-.message {
+.message-list-item {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 600px;
   border: 1px solid #60d2d6;
   border-radius: 10px;
@@ -9,18 +9,37 @@
   background-color: #eaf1f1;
 }
 
-.message__info {
+.message-list-item__info {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   margin-bottom: 5px;
 }
 
-.message__author {
+.message-list-item__author {
   font-weight: bold;
 }
 
-.message__time {
+.message-list-item__time {
   font-size: 14px;
   color: #696969;
+}
+
+.message-list-item__icon {
+  display: flex;
+  margin-right: 12px;
+}
+
+.message-list-item__icon img {
+  margin: auto;
+  height: 55px;
+  width: 55px;
+  border: 1px solid #60d2d6;
+  border-radius: 50%;
+}
+
+.message-list-item__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
