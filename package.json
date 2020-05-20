@@ -1,7 +1,7 @@
 {
   "name": "react-messenger",
   "version": "0.1.0",
-  "homepage": "https://svyatkotov.github.io/middle.react.praktikum.yandex",
+  "homepage": "https://svyatkotov.github.io/react-messenger",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
