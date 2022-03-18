@@ -1,11 +1,9 @@
 ## React Messenger
 
-### Учебный проект курса "Миддл-фронтенд разработчик" в Яндекс.Практикум.
-
 https://svyatkotov.github.io/react-messenger/
 
-Реализована функциональность из бэклога первого спринта:
- * Список чатов;
- * Выбор чата показывает экран чата;
- * Подсветка выбора элемента чата;
- * Сортировка списка чатов и сообщений по времени.
+Implemented functionality:
+ * Chat list;
+ * Selecting a chat shows the chat screen;
+ * Current chat highlighting;
+ * Sorting the list of chats and messages by time.
